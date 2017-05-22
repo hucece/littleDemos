@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>裁剪</title>
+	<script type="text/javascript" src="./js/cropper.js"></script>
+	<style type="text/css">
+		.box{width: 400px;height: 300px;border: 1px solid #ddd;margin: 20px auto;position: relative;}
+		.cropperBox{width: 120px;height: 100px;border: 1px solid #ccc;position: absolute;left: 0px;top: 0px;cursor: move;}
+		.canvasWindow{position: absolute;left: 0px;top: 0px;}
+		.btn{font-size: 14px;padding: 6px 10px;border: 1px solid #ddd;color:#fff;background-color: #3385ff;}
+		.showImg{border: 1px solid #ddd;}
+	</style>
+</head>
+<body>
+	<form action="#" method="post" style="display: none;">
+		<input type="file" name="file" accept="image/*"/ id="file">
+	</form>
+	<button id="clickMe">点我上传图片</button>
+	<div class="box" id="box">
+		<canvas id="imgCanvas"></canvas>
+		<canvas id="canvasWindow" class="canvasWindow"></canvas>
+		<div id="cropperBox" class="cropperBox"></div>
+	</div>
+	<button id="exportBtn" class="btn">导出裁剪图</button>
+	<img id="showImg" class="showImg" src=""></canvas>
+</body>
+</html>
