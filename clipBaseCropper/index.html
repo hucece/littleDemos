@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片裁剪</title>
+	<link rel="stylesheet" href="./css/cropper.min.css">
+	<style type="text/css">
+		.imgContainer{
+			width: 246px;
+			height: 146px;
+			margin: 20px;
+		}
+		.imgContainer img{
+			width: 100%;
+			height: 100%;
+		}
+		.btn{
+			padding: 0.5em 1.2em;
+			border:  1px solid #ddd;
+			background: #fff;
+			margin: 10px;
+		}
+		.croppedImg{
+			width: 148px;
+			height: 88px;
+		}
+	</style>
+</head>
+<body>
+	<input type="file" name="file" id="myFile" style="display:none;">
+	<button class="btn" id="clickMeBtn">上传图片</button><button class="btn" id="croperClickBtn">裁剪</button>
+	<div class="imgContainer">
+		<img src="" alt="请上传您要裁剪的图片" id="imgSource">
+	</div>
+	<img src="" alt="" id="croppedImg" class="croppedImg">
+</body>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/cropper.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</html>
