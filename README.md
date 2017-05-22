@@ -7,6 +7,6 @@
 #### 裁剪demo,访问https://hucece.github.io/littleDemos/cropper/cropperSuccess.html 看效果
 ## cipBaseCropper
 #### 基于cropper插件做的裁剪图片，另外结合h5的FormData,blob等等实现将裁剪后的图片上传到后台
-### 裁剪demo，访问https://hucece.github.io/littleDemos/clipBaseCropper/index.html 看效果
+#### 裁剪demo，访问https://hucece.github.io/littleDemos/clipBaseCropper/index.html 看效果
 
 
