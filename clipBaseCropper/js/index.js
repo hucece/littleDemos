@@ -35,9 +35,10 @@ $(function(){
 			fd.append("file",blob);
 			$.ajax({
 				url: 'picture/upload',
+				type: 'post',
 				data: fd,
-				contentType: false,
-				processData: false,
+				contentType: false, //false 是为了避免 JQuery 对其操作，从而失去分界符，而使服务器不能正常解析文件。
+				processData: false, //如果要发送DOM树信息或者其他不希望转换的信息，请设置为false。
 				cache: false,
 				success: function(data){
 
