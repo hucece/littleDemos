@@ -9,7 +9,8 @@
 #### 基于cropper插件做的裁剪图片，另外结合h5的FormData,blob等等实现将裁剪后的图片上传到后台
 #### 裁剪demo，访问https://hucece.github.io/littleDemos/clipBaseCropper/index.html 看效果  
 ## popover
-#### 一般，能用css达到一个动态效果的，便尽量不用js操作，这个效果是项目中的一个需求，实现这个效果灵感来自于阿里实习面试的时候的一个问题
+#### 一般，能用css达到一个动态效果的，便尽量不用js操作，这个效果是项目中的一个需求，实现这个效果灵感来自于阿里实习面试的时候的一个问题  
+#### 不兼容ie7以下的浏览器
 #### popover demo:访问 http://hucece.github.io/littleDemos/popover/index.html
 
 
