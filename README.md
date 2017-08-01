@@ -11,7 +11,9 @@
 ## popover
 #### 一般，能用css达到一个动态效果的，便尽量不用js操作，这个效果是项目中的一个需求，实现这个效果灵感来自于阿里实习面试的时候的一个问题  
 #### 不兼容ie7以下的浏览器
-#### popover demo:访问 http://hucece.github.io/littleDemos/popover/index.html
-
+#### popover demo:访问 http://hucece.github.io/littleDemos/popover/index.html  
+## checkbox or radio
+### 使用纯css实现选择切换，主要利用到label的for和checkbox的id结合，具体效果请看
+### 访问http://hucece.github.io/littleDemos/chckboxOrRadio/index.html 
 
 
