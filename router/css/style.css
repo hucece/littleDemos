@@ -1,0 +1,29 @@
+html,body{margin: 0px;padding: 0px;font-family: "微软雅黑";font-size: 16px;}
+.wrapper{
+	/* text-align: center; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content:center; 
+	padding: 50px;
+}
+a{
+	display: inline-block;
+	padding: 0.625rem 0.927rem;
+	text-decoration: none;
+	margin: 5px;
+	background-color: #fff;
+}
+.a1{
+	color: rgba(76, 176, 249, 0.9);
+	border: 2px solid rgba(76, 176, 249, 0.9);
+
+}
+.a2{
+	color: #fec04e;
+	border: 2px solid #fec04e;
+}
+.a3{
+	color: #a49ef0;
+	border: 2px solid #a49ef0;
+}

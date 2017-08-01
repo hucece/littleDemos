@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkbox和radio应用</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box">
+			<div class="box-header">
+				选中数据行
+			</div>
+			<div class="box-body">
+				<ul>
+					<li>
+						<input type="radio" id="input1" name="input" class="hide inputChoose1" checked=checked>
+						<label for="input1" class="box-label">
+							item01
+							<img src="./imgs/ok.png" alt="" class="okImg">
+						</label>
+					</li>
+					<li>
+						<input type="radio" id="input2" name="input" class="hide inputChoose1">
+						<label for="input2" class="box-label">
+							item02
+							<img src="./imgs/ok.png" alt="" class="okImg">
+						</label>
+					</li>
+					<li>
+						<input type="radio" id="input3" name="input" class="hide inputChoose1">
+						<label for="input3" class="box-label">
+							item03
+							<img src="./imgs/ok.png" alt="" class="okImg">
+						</label>
+					</li>
+					<li>
+						<input type="radio" id="input4" name="input" class="hide inputChoose1">
+						<label for="input4" class="box-label">
+							item04
+							<img src="./imgs/ok.png" alt="" class="okImg">
+						</label>
+					</li>
+					<li>
+						<input type="radio" id="input5" name="input" class="hide inputChoose1">
+						<label for="input5" class="box-label">
+							item05
+							<img src="./imgs/ok.png" alt="" class="okImg">
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box">
+			<div class="box-header">
+				switch开关
+			</div>
+			<div class="box-body">
+				<ul>
+					<li>
+						<div class="switch">
+							<input type="checkbox" class="switchInput" name="switch001" id="switch1">
+							<label for="switch1" class="switchLabel">
+								<span class="switchSpan"></span>
+							</label>
+						</div>
+						<div class="switch">
+							<input type="checkbox" class="switchInput" name="switch001" id="switch2" checked=checked>
+							<label for="switch2" class="switchLabel">
+								<span class="switchSpan"></span>
+							</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box">
+			<div class="box-header">折叠框</div>
+			<ul class="collapsePanel">
+				<li>
+					<input type="checkbox" class="hide collapseInput" name="collapse" id="collapse1">
+					<label for="collapse1" class="collapseLabel">collapse1</label>
+					<div class="collapseBody">aaaaaaaaaaaaa</div>
+				</li>
+				<li>
+					<input type="checkbox" class="hide collapseInput" name="collapse" id="collapse2">
+					<label for="collapse2" class="collapseLabel">collapse2</label>
+					<div class="collapseBody">bbbbbbbbbbbbbbbbbb</div>
+				</li>
+				<li>
+					<input type="checkbox" class="hide collapseInput" name="collapse" id="collapse3">
+					<label for="collapse3" class="collapseLabel">collapse3</label>
+					<div class="collapseBody">cccccccccccccccccc</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

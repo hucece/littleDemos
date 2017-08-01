@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>前端路由-----hashChange</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<a href="#/" class="a1">turn white</a>
+		<a href="#/orange" class="a2">turn orange</a>
+		<a href="#/purple" class="a3">turn purple</a>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			function Router(){
+				this.routes = {};
+				this.currentUrl = '';
+			};
+			Router.prototype.route = function(path,callback){
+				this.routes[path] = callback || function(){};
+			};
+			Router.prototype.refresh = function(){
+				this.currentUrl =location.hash.slice(1) || "/";
+				console.log(this.currentUrl)
+				this.routes[this.currentUrl]();
+			}
+			Router.prototype.init = function(){
+				window.addEventListener('load',this.refresh.bind(this),false);
+				window.addEventListener('hashchange', this.refresh.bind(this), false);
+			}
+			window.router = new Router();
+			window.router.init();
+			var content = document.getElementsByTagName("body")[0];
+			router.route("/",function(){
+				changeColor("white");
+			})
+			router.route("/orange",function(){
+				changeColor("yellow");
+			})
+			router.route("/purple",function(){
+				changeColor("green");
+			})
+			function changeColor(color){
+				content.style.backgroundColor = color;
+			}
+
+		}
+	</script>
+</body>
+</html>
