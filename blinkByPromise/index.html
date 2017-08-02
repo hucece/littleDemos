@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrapper{
+			height: 600px;
+			background-color: #f7f7f7;
+		}
+		.wrapper{
+			overflow: hidden;
+
+		}
+		.wrapper li{
+			list-style: none;
+			float: left;
+			margin: 20px 20px 0px 0px;
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="container">
+			<li class="circle" id="green"></li>
+			<li class="circle" id="red"></li>
+			<li class="circle" id="yellow"></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		function red(){
+		    document.getElementById("red").style.backgroundColor = "red";
+		    document.getElementById("green").style.backgroundColor = "#ccc"
+		    document.getElementById("yellow").style.backgroundColor = "#ccc"
+		}
+		function green(){
+		     document.getElementById("red").style.backgroundColor = "#ccc";
+		    document.getElementById("green").style.backgroundColor = "green"
+		    document.getElementById("yellow").style.backgroundColor = "#ccc"
+		}
+		function yellow(){
+		     document.getElementById("red").style.backgroundColor = "#ccc";
+		    document.getElementById("green").style.backgroundColor = "#ccc"
+		    document.getElementById("yellow").style.backgroundColor = "yellow"
+		}
+
+		function blink(callbackList){
+			var def = new Promise(function(resolve, reject){resolve();});
+			var blink = function(wait, callback){
+			    return new Promise(function(resolve, reject) {
+			        setTimeout(function() {
+			            callback();
+			            resolve();
+			        }, wait);
+			    });
+			};
+			var obj0 = callbackList[0];
+			var obj1 = callbackList[1];
+			var obj2 = callbackList[2];
+			(function step(def){
+				def.then(function(){
+			        return blink(obj0.wait, obj0.callback);
+			    }).then(function(){
+			        return blink(obj1.wait, obj1.callback);
+			    }).then(function(){
+			        return blink(obj2.wait, obj2.callback);
+			    }).then(function(){
+			        step(def);
+			    });
+			})(def)
+		}
+		blink([{callback:green,wait:2000},{callback:red,wait:6000},{callback:yellow,wait: 6000}])
+	}
+</script>
+</html>
