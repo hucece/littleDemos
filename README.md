@@ -13,8 +13,11 @@
 #### 不兼容ie7以下的浏览器
 #### popover demo:访问 http://hucece.github.io/littleDemos/popover/index.html  
 ## checkbox or radio
-### 使用纯css实现选择切换，主要利用到label的for和checkbox的id结合，具体效果请看
+#### 使用纯css实现选择切换，主要利用到label的for和checkbox的id结合，具体效果请看
 ### 访问http://hucece.github.io/littleDemos/chckboxOrRadio/index.html 
 ### 使用promise实现红绿灯闪烁的demo
-#### 访问http://hucece.github.io/littleDemos/blinkByPromise/index.html 
+#### 访问http://hucece.github.io/littleDemos/blinkByPromise/index.html    
+### menu用来收集有趣的导航条
+#### 访问http://hucece.github.io/littleDemos/menu/radialMenu.html
+
 
