@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>径向菜单</title>
+	<style>
+		html,body,ul{margin:0px;padding:0px;}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style: none;
+		}
+		body{
+			background-color: #292a38;
+			font-family: "微软雅黑";
+		}
+		.radialMenu{
+			width: 200px;
+			height: 200px;
+			border: 2px dotted #4e5061;
+		 	border-radius: 50%;
+		 	margin: 50px;
+		 	position: relative;
+		}
+		.radialBtn{
+			border: 0;
+			border-radius: 2px;
+			background-color: #15a5f3;
+			font-size: 12px;
+			padding:10px 6px;
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);   
+		}
+		.radialNav{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: scale(0);
+			transition: all 0.5s ease-out; 
+		}
+		.radialItem{
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%,-50%); /* 每个好航项的中心点在线上 */
+			width: 30px;
+			height: 30px;
+			background-color: #f44283;
+			color: #fff;
+			line-height: 30px;
+			border-radius: 4px;	
+		}
+		.radialNav li a{
+			color: #fff;
+		}
+		.active{
+			transform: scale(1); 
+		}
+	</style>
+</head>
+<body>
+	<div class="radialMenu">
+		<ul class="radialNav">
+			<li class="radialItem"><a href="javascript:;">1</a></li>
+			<li class="radialItem"><a href="javascript:;">2</a></li>
+			<li class="radialItem"><a href="javascript:;">3</a></li>
+			<li class="radialItem"><a href="javascript:;">4</a></li>
+			<li class="radialItem"><a href="javascript:;">5</a></li>
+			<li class="radialItem"><a href="javascript:;">6</a></li>
+			<li class="radialItem"><a href="javascript:;">7</a></li>
+			<li class="radialItem"><a href="javascript:;">8</a></li>
+		</ul>
+		<button class="radialBtn" id="radialBtn">点我</button>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			var menu = function(wrapper,isOpen){
+				var isOpen = isOpen;
+				var r = wrapper.offsetWidth / 2;   //半径
+				var list = Array.prototype.slice.apply(wrapper.getElementsByClassName("radialItem"));   //导航项
+				var startAngle = 0;    //角度开始
+				var gap = 360/list.length;   //导航之间的角度间隔
+				var radian = Math.PI / 180;
+				
+				list.forEach(function(ele,index){
+					var currentAngle = (startAngle + gap*index) * radian; 
+					var left = r+r*Math.cos(currentAngle) + "px";
+					var top = r+r*Math.sin(currentAngle) + "px";
+
+					ele.style.left = left;
+					ele.style.top = top;
+				})
+				/*清空，避免内存泄露*/
+				list = null;
+
+				return function(){
+					isOpen = !isOpen;
+					var classname = "radialNav" + (isOpen ?" active":"");
+					wrapper.getElementsByClassName("radialNav")[0].className = classname;
+				}
+
+			}
+			document.getElementById("radialBtn").onclick = menu(document.getElementsByClassName("radialMenu")[0],false);
+		}
+	</script>
+</body>
+</html>
