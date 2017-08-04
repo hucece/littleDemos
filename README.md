@@ -15,5 +15,6 @@
 ## checkbox or radio
 ### 使用纯css实现选择切换，主要利用到label的for和checkbox的id结合，具体效果请看
 ### 访问http://hucece.github.io/littleDemos/chckboxOrRadio/index.html 
-
+### 使用promise实现红绿灯闪烁的demo
+#### 访问http://hucece.github.io/littleDemos/blinkByPromise/index.html 
 
