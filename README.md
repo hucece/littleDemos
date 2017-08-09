@@ -18,6 +18,9 @@
 ## 使用promise实现红绿灯闪烁的demo
 #### 访问http://hucece.github.io/littleDemos/blinkByPromise/index.html    
 ## menu用来收集有趣的导航条
-#### 访问http://hucece.github.io/littleDemos/menu/radialMenu.html
+#### 访问http://hucece.github.io/littleDemos/menu/radialMenu.html  
+## 基于jQuery做的一个modal小插件，目前功能还不够强大，基本需求做出来了
+#### 访问http://hucece.github.io/littleDemos/modal/modal001.html 
+
 
 
