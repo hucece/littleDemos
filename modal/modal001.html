@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义插件-模态框</title>
+	<link rel="stylesheet" href="./css/modal001.css">
+</head>
+<body>
+	<div id="modal0" class="modal">
+		<div class="boxCenter">
+			确定要退出吗？
+		</div>
+		<div class="btns">
+			<button class="okBtn">确定</button>
+			<button class="cancelBtn">取消</button>
+		</div>
+	</div>
+	<button>点击我</button>
+	<script type="text/javascript" src="./js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="./js/modal001.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#modal0").modal({
+				keyboard: true,
+				show: true,
+				backdrop: false
+			}).modal("show")
+			$("button").on("click",function(){
+				$("#modal0").modal("show");
+			})
+			$(".cancelBtn").on("click",function(){
+				$("#modal0").modal("hide");
+			})
+		})
+	</script>
+</body>
+</html>

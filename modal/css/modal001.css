@@ -1,0 +1,47 @@
+html,body{margin: 0px;padding: 0px;font-family: "微软雅黑"}
+.swal-mask{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #ccc;
+	opacity: 0.7;
+	visibility: hidden;
+	z-index: 998;
+}
+.modal{
+	width: 200px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+	z-index: 9999;
+	visibility: hidden;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 0 1px #ccc;
+}
+.boxCenter{
+	margin: 20px auto;
+	text-align: center;
+}
+.btns{
+	text-align: center;
+}
+.btns button{
+	padding: 7px 10px;
+	margin-right: 10px;
+}
+.okBtn{
+	background-color: #FF9900;
+	color: #fff;
+	border: 1px solid #FF9900;
+}
+.cancelBtn{
+	background: #fff;
+	border: 1px solid #ccc;
+}
